@@ -126,12 +126,12 @@ main {
 
 .future-weather {
     background: rgba(100, 129, 223, 0.24);
-    padding:10px;
+    padding:20px;
     position: relative;
     bottom: 0;
    color:white;
     width: 100%;
-   font-size: 25px;
+   font-size: 20px;
    border-radius:90%;
    align-items: center;
    flex-direction: column;
@@ -146,8 +146,9 @@ main {
 .weather-items {
     display: flex;
     align-items: center;
-    margin-left: 35%;
+    margin-left: 25%;
     margin-right: 30%;
+    
     
 
 
@@ -168,3 +169,7 @@ main {
     line-height: 1.5;
     font-weight: 600;
 }  
+
+#move {
+margin-right: 30%;
+}
