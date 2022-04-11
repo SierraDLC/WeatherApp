@@ -12,7 +12,7 @@ function setQuery(evt) {
         getResults(searchbox.value);
       
 function getResults (zip) {
-    fetch(`http://api.openweathermap.org/geo/1.0/zip?zip=${zip},US&appid=${API.key}`)
+    fetch(`https://api.openweathermap.org/geo/1.0/zip?zip=${zip},US&appid=${API.key}`)
         .then((response) => response.json())
         .then((json) => {
             let lat = json.lat;
@@ -22,7 +22,7 @@ function getResults (zip) {
             // console.log(json)
             // console.log(lat, ' ', lon);
 
-        fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${API.key}`)
+        fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=${API.key}`)
             .then((response) => response.json())
             .then((json) => {
             // console.log(json)
@@ -124,6 +124,9 @@ function getResults (zip) {
                     let iconLinkDay1 = `https://openweathermap.org/img/wn/${dayOneImg}@2x.png`
                     let mainIconDay1 = document.querySelector(".w-icon-1")
                     mainIconDay1.src = iconLinkDay1
+
+                let dayOneDiv = document.querySelector(".one-day")
+                firstImage = document.createElement("IMG")
                 
                 document.querySelector('.high-low-tomorrow').innerHTML = dayOneHighLow
                 
@@ -214,7 +217,7 @@ function getResults (zip) {
     
 
 
-        fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city},${state},US&appid=${API.key}`)
+        fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city},${state},US&appid=${API.key}`)
             .then((response) => response.json())
             .then((json) => {
                 console.log(json)
