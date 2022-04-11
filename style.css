@@ -127,7 +127,7 @@ main {
 .future-weather {
     background: rgba(100, 129, 223, 0.24);
     padding:10px;
-    position: fixed;
+    position: relative;
     bottom: 0;
    color:white;
     width: 100%;
